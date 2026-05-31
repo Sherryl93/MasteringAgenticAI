@@ -17,5 +17,5 @@ Projects are built using AI-assisted (vibe coding) workflows.
 - GitHub for version control
 
 ## 👤 Author
-[Your Name]
+[Sherryl Santoso]
 Mastering Agentic AI Bootcamp · 2026
