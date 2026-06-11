@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-06-11T19:40:57",
+  "num_questions": 6,
+  "judge_model": "meta-llama/Llama-3.3-70B-Instruct",
+  "configs": [
+    {
+      "name": "Config A \u2014 fixed-size, no rerank",
+      "scores": {
+        "faithfulness": 0.5833333333333334,
+        "context_precision": 0.44166666665398147,
+        "context_recall": 0.611111111111111
+      }
+    },
+    {
+      "name": "Config B \u2014 semantic, no rerank",
+      "scores": {
+        "faithfulness": 0.5694444444444444,
+        "context_precision": 0.47499999998120374,
+        "context_recall": 1.0
+      }
+    },
+    {
+      "name": "Config C \u2014 semantic + FlashRank rerank",
+      "scores": {
+        "faithfulness": 0.7861111111111111,
+        "context_precision": 0.30444444443283697,
+        "context_recall": 0.5555555555555555
+      }
+    }
+  ],
+  "winner": "Config B \u2014 semantic, no rerank",
+  "analysis": [
+    "- Best Faithfulness: Config C \u2014 semantic + FlashRank rerank (0.786).",
+    "- Best Context Precision: Config B \u2014 semantic, no rerank (0.475).",
+    "- Best Context Recall: Config B \u2014 semantic, no rerank (1.000).",
+    "- Chunking (A->B) reduced Faithfulness by -0.014.",
+    "- Chunking (A->B) improved Context Precision by +0.033.",
+    "- Chunking (A->B) improved Context Recall by +0.389.",
+    "- Reranking (B->C) improved Faithfulness by +0.217.",
+    "- Reranking (B->C) reduced Context Precision by -0.171.",
+    "- Reranking (B->C) reduced Context Recall by -0.444."
+  ]
+}

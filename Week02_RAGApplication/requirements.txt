@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────────────────────
+# Macro-Micro Bridge Agent — Python dependencies
+# Tested on Python 3.11. Install with:  pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────
+
+# --- LangGraph / LangChain core ---
+langgraph>=0.2.40
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-experimental>=0.3.0          # SemanticChunker
+langchain-openai>=0.2.0                # ChatOpenAI + OpenAIEmbeddings (pointed at Nebius)
+langchain-huggingface>=0.1.0           # HuggingFaceEmbeddings for BAAI/bge-base-en-v1.5
+
+# --- Embeddings (local) ---
+sentence-transformers>=3.0.0           # backs BAAI/bge-base-en-v1.5
+
+# --- Vector store ---
+pinecone>=5.0.0                        # serverless client (v5+)
+
+# --- Reranking (local, no API key) ---
+flashrank>=0.2.9                       # ms-marco-MiniLM-L-12-v2
+
+# --- Sparse retrieval (local, no API key) ---
+rank-bm25>=0.2.2                       # BM25Okapi for the hybrid sparse leg
+
+# --- Document loaders / parsing ---
+pymupdf>=1.24.0                        # PyMuPDFLoader (FOMC PDFs)
+beautifulsoup4>=4.12.0                 # BLS HTML parsing
+lxml>=5.0.0                            # fast parser backend for bs4
+sec-edgar-downloader>=5.0.0            # NVDA 10-K / 8-K filings
+
+# --- LLM client (Nebius via OpenAI-compatible API) ---
+openai>=1.40.0                         # OpenAI client only as transport to Nebius base_url
+
+# --- Evaluation ---
+# Pinned: ragas 0.4.x is the API this harness targets (llm_factory,
+# EvaluationDataset.from_list). It eagerly imports a langchain_community path
+# that langchain 1.x dropped; evaluate/ragas_eval.py registers a small shim so
+# it imports cleanly without downgrading the langchain stack.
+ragas>=0.4,<0.5
+datasets>=2.20.0                       # ragas EvaluationDataset backing
+
+# --- App / config ---
+streamlit>=1.38.0
+python-dotenv>=1.0.0
