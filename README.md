@@ -11,9 +11,10 @@ Projects are built using AI-assisted (vibe coding) workflows.
 |------|-------|---------|
 | Week 01 | Vibe Coding | [AI Job Survival Dashboard 2030](./Week01_VibeCoding/Project01_AI_Job_Dashboard) |
 | Week 02 | RAG Application| [The Macro-Micro Bridge Agent](./Week02_RAGApplication) |
+| Week 03 | Agentic System| [ReviewPilot — Multi-Agent Code Review Assistant](./Week03_ReviewPilot) |
 
-## 🛠️ Tech Stack
-- Python · Streamlit · Plotly · Pandas · LangGraph · LangChain · Pinecone · BM25 · FlashRank
+## 🛠️ Tech Stack 
+- Python · Streamlit · Plotly · Pandas · LangGraph · LangChain · Pinecone · BM25 · FlashRank · Nebius
 - Claude Code (AI coding assistant)
 - GitHub for version control
 
