@@ -1,0 +1,26 @@
+# Core orchestration
+langgraph>=0.2.0
+langchain-core>=0.3.0
+
+# LLM access (Nebius is OpenAI-API-compatible)
+openai>=1.40.0
+
+# Config
+python-dotenv>=1.0.0
+pydantic>=2.6.0
+
+# Repo handling
+GitPython>=3.1.40
+
+# Static analysis tools
+ruff>=0.5.0
+bandit>=1.7.8
+
+# UI
+streamlit>=1.36.0
+pandas>=2.0.0
+streamlit-mermaid>=0.2.0   # interactive pipeline diagram (lightweight mermaid.js wrapper)
+
+# Test / coverage tooling (used for ReviewPilot's own tests, not target repos)
+pytest>=8.0.0
+coverage>=7.4.0
